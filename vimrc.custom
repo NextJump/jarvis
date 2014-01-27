@@ -32,9 +32,6 @@ set rtp+=$GOROOT/misc/vim
 " Allows you to save files you opened without write permissions
 cmap w!! w !sudo tee %
 
-" Define default location for ctrlp to begin searching
-let g:ctrlp_cmd = 'CtrlP ~/code/empire/trunk'
-
 " For quick save/quit
 nnoremap ; :
 
