@@ -39,7 +39,7 @@ fi
 
 if [ ! -d "$INSTALLDIR/jarvis" ]; then
     echo "$(tput setaf 2)JARVIS: I do not detect a previous installation. Creating a new version.$(tput sgr 0)"
-    git clone https://github.com/ctaylo21/jarvis.git
+    git clone https://github.com/NextJump/Jarvis.git
     createLinks
     cd $INSTALLDIR/jarvis
 
