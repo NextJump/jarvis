@@ -1,4 +1,4 @@
-#!/usr/env sh
+#!/usr/bin/env sh
 INSTALLDIR=$PWD
 
 echo "$(tput setaf 2)JARVIS: Greetings. Preparing to power up and begin diagnostics.$(tput sgr 0)"
