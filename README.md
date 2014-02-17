@@ -31,7 +31,7 @@ Here are some screenshots of the included colorschemes:
 ### Installation
 Simply type this into your CLI
 
-<code>curl -L https://raw.github.com/NextJump/Jarvis/master/install.sh| sh </code>
+<code>curl -L https://raw.github.com/NextJump/jarvis/master/install.sh | sh </code>
 
 <b>Warning</b>: This will move your .vim directory to .vim.bkp.
 
