@@ -63,15 +63,9 @@ set smartindent
 
 " a very common replacement for the default of "\"
 let mapleader=","
-" I'm very fond of this one though -- IM
-"let mapleader=";"
 
-" using comma allows this though
 " For quick save/quit
 nnoremap ; :
-
-" For quick save/quit
-nnoremap <leader><space> :
 
 " find and replace (another windows shortcut)
 map <C-h> :%s///gc<left><left><left><left>
@@ -84,7 +78,7 @@ map <S-y> yiW
 nmap <leader>n :NERDTree<CR>
 
 " Opens current file heiarchy in Nerdtree
-nmap <leader>nf :NERDTreeFind<CR>
+nmap <leader>f :NERDTreeFind<CR>
 
 " === Tagbar shortcuts === "
 "Open Tagbar or jump to it if already open (useful for split windows)
