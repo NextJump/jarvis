@@ -1,3 +1,26 @@
+
+" ============================================================================ "
+" ===                                PLUGINS                               === "
+" ============================================================================ "
+
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'tpope/vim-fugitive'
+
+" Custom colors for vim easymotion
+hi link EasyMotionTarget ErrorMsg  
+hi link EasyMotionShade Comment
+
+" Keep list of open files in buffer at top
+let g:airline#extensions#tabline#enabled = 1
+
+" Define default location for ctrlp to begin searching
+let g:ctrlp_cmd = 'CtrlP ~/code/empire/trunk'
+
+
+" ============================================================================ "
+" ===                                SETTINGS                              === "
+" ============================================================================ "
+
 " font/colorscheme options "
 set background=dark
 set t_Co=256
@@ -19,22 +42,62 @@ if has("gui_running")
   endif
 endif
 
-" Custom colors for vim easymotion
-hi link EasyMotionTarget ErrorMsg  
-hi link EasyMotionShade Comment
-
-" Keep list of open files in buffer at top
-let g:airline#extensions#tabline#enabled = 1
-
 "  Go support
 set rtp+=$GOROOT/misc/vim
 
-" Allows you to save files you opened without write permissions
-cmap w!! w !sudo tee %
+" Hides buffers instead of closing them
+set hidden
+
+" do not wrap long lines by default
+set nowrap
+
+" Manual line folding
+set foldmethod=manual
+set foldlevel=1
+
+set smartindent
+
+" ============================================================================ "
+" ===                                MAPPINGS                              === "
+" ============================================================================ "
+
+" a very common replacement for the default of "\"
+let mapleader=","
 
 " For quick save/quit
 nnoremap ; :
 
+" find and replace (another windows shortcut)
+map <C-h> :%s///gc<left><left><left><left>
+
+" quick yank or delete
+map <S-d> diW
+map <S-y> yiW
+
+" === Nerdtree shorcuts === "
+nmap <leader>n :NERDTree<CR>
+
+" Opens current file heiarchy in Nerdtree
+nmap <leader>f :NERDTreeFind<CR>
+
+" === Tagbar shortcuts === "
+"Open Tagbar or jump to it if already open (useful for split windows)
+nmap <leader>] :TagbarOpen j<CR>
+
+" Toggle Tagbar on and off with F6
+nmap <F6> :TagbarToggle<cr>
+
+" === Ctrlp shortcuts === "
+nmap <leader>t :CtrlP<CR>
+
+" Opens Ctrlp but in buffer search mode to quickly search in recent files
+nmap <leader>b :CtrlPBuffer<CR>
+
+" Allows you to save files you opened without write permissions
+cmap w!! w !sudo tee %
+
 " Remap space to page down and - to page up
 noremap <Space> <PageDown>
 noremap - <PageUp>
+
+nnoremap <silent> <leader>l :noh<CR>

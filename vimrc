@@ -82,8 +82,6 @@ let g:tagbar_expand = 1
 " ============================================================================ "
 " ===                           EDITING OPTIONS                            === "
 " ============================================================================ "
-" remap leader key to ,
-let mapleader=","
 
 " Line Numbers
 set nu
@@ -95,10 +93,6 @@ set shiftwidth=4
 
 " Backspace works as it damn well should!
 set backspace=indent,eol,start
-
-" Manual line folding
-set foldmethod=manual
-set foldlevel=1
 
 " Search highlighting
 set hlsearch
@@ -112,12 +106,6 @@ filetype plugin on
 " Clear highlighted search terms while preserving history
 nmap <silent> <leader>/ :nohlsearch<CR>
 
-" Hides buffers instead of closing them
-set hidden
-
-" do not wrap long lines by default
-set nowrap
-
 set nolist
 
 " incremental search
@@ -129,39 +117,6 @@ set ignorecase
 " if the search string has an upper case letter in it, the search will be case sensitive
 set smartcase
 
-" ============================================================================ "
-" ===                            CUSTOM MAPPINGS                           === "
-" ============================================================================ "
-" case insensitive find (windows shortcut for ease of use)
-map <C-f> /\c
-
-" find and replace (another windows shortcut)
-map <C-h> :%s///gc<left><left><left><left>
-
-"delete word
-map <S-d> diW
-
-"yank word
-map <S-y> yiW
-
-" === Nerdtree shorcuts === "
-nmap <leader>n :NERDTree<CR>
-
-" Opens current file heiarchy in Nerdtree
-nmap <leader>f :NERDTreeFind<CR>
-
-" === Tagbar shortcuts === "
-"Open Tagbar or jump to it if already open (useful for split windows)
-nmap <leader>] :TagbarOpen j<CR>
-
-" Toggle Tagbar on and off with F6
-nmap <F6> :TagbarToggle<cr>
-
-" === Ctrlp shortcuts === "
-nmap <leader>t :CtrlP<CR>
-
-" Opens Ctrlp but in buffer search mode to quickly search in recent files
-nmap <leader>b :CtrlPBuffer<CR>
 
 " ============================================================================ "
 " ===                                 MISC.                                === "
